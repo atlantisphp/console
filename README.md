@@ -77,4 +77,4 @@ Now run the following command
 php console app:create-user donaldpakkies
 ```
 
-For more information, visit: (Symfony Console Documentation)[https://symfony.com/doc/current/console]
+For more information, visit: https://symfony.com/doc/current/console
