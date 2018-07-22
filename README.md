@@ -80,10 +80,10 @@ php console app:create-user donaldpakkies
 ## Application
 
 ### load
-| Argument      | Type   | Description  |
-| ------------- | -------| ------------ |
-| directory     | String | The directory where commands are stored |
-| require     | Boolean | Require commands (default: false) |
+| Argument      | Type    | Description  |
+| ------------- | --------| ------------ |
+| directory     | String  | The directory where commands are stored |
+| require       | Boolean | Require commands (default: false) |
 
 Example:
 ```
@@ -99,10 +99,32 @@ $application->run();
 ## Command
 
 ### Variables
-| Name      | Type   | Description  |
+| Name          | Type   | Description  |
 | ------------- | -------| ------------ |
 | signature     | String | The name and signature of the console command. |
-| help     | String | The full command description (optional). |
-| descriptions | Array | The descriptions of the console commands (optional). |
+| help          | String | The full command description (optional). |
+| descriptions  | Array  | The descriptions of the console commands (optional). |
+
+#### signature
+Command name: `c`
+Required arguments: `{name}`
+Optional arguments: `{name:?}`
+Options arguments: `{name=}` or `{name=value}`
+
+| Type              | Syntax |
+| ----------------- | ------- |
+| Command Name      | `name` or `action:name` |
+| Required argument | `{name}`  |
+| Optional argument | `{name:?} |
+| Options argument  | `{name=}` or `{name=value}` |
+
+Example:
+```
+$signature = "make:file {file_name}";
+```
+
+```
+php console make:file readme.md
+```
 
 For more information, visit: https://symfony.com/doc/current/console
