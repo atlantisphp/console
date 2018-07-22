@@ -110,7 +110,7 @@ $application->run();
 | ----------------- | ------- |
 | Command Name      | `name` or `action:name` |
 | Required argument | `{name}`  |
-| Optional argument | `{name:?} |
+| Optional argument | `{name:?}` |
 | Options argument  | `{name=}` or `{name=value}` |
 
 Example:
