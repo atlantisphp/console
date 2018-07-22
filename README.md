@@ -77,4 +77,32 @@ Now run the following command
 php console app:create-user donaldpakkies
 ```
 
+## Application
+
+### load
+| Argument      | Type   | Description  |
+| ------------- | -------| ------------ |
+| directory     | String | The directory where commands are stored |
+| require     | Boolean | Require commands (default: false) |
+
+Example:
+```
+use AtlantisPHP\Console\Application;
+
+require __DIR__ . '/vendor/autoload.php';
+
+$application = new Application('My Application');
+$application->load(__DIR__ . '/Commands');
+$application->run();
+```
+
+## Command
+
+### Variables
+| Name      | Type   | Description  |
+| ------------- | -------| ------------ |
+| signature     | String | The name and signature of the console command. |
+| help     | String | The full command description (optional). |
+| descriptions | Array | The descriptions of the console commands (optional). |
+
 For more information, visit: https://symfony.com/doc/current/console
