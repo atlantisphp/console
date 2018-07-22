@@ -106,11 +106,6 @@ $application->run();
 | descriptions  | Array  | The descriptions of the console commands (optional). |
 
 #### signature
-Command name: `c`
-Required arguments: `{name}`
-Optional arguments: `{name:?}`
-Options arguments: `{name=}` or `{name=value}`
-
 | Type              | Syntax |
 | ----------------- | ------- |
 | Command Name      | `name` or `action:name` |
