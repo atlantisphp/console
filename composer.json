@@ -1,0 +1,22 @@
+{
+  "name": "atlantisphp/console",
+  "description": "Console component",
+  "version": "1.0",
+  "license": "MIT",
+  "type": "package",
+  "authors": [
+    {
+      "name": "Donald Pakkies",
+      "email": "donaldpakkies@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AtlantisPHP\\Console\\": ""
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "symfony/console": "^4.1"
+  }
+}
