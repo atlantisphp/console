@@ -42,10 +42,7 @@ class Application extends SymfonyApplication
    */
   private function cleanPath($path)
   {
-    $path = substr($path, 0, 1) == '/' ? substr($path, 1, strlen($path) - 1) : $path;
     $path = substr($path, strlen($path) - 1, 1) == '/' ? substr($path, 0, strlen($path) - 1) : $path;
-
-    $path = substr($path, 0, 1) == '\\' ? substr($path, 1, strlen($path) - 1) : $path;
     $path = substr($path, strlen($path) - 1, 1) == '\\' ? substr($path, 1, strlen($path) - 1) : $path;
 
     $path = preg_replace('#' . DIRECTORY_SEPARATOR . '+#', DIRECTORY_SEPARATOR, $path);
