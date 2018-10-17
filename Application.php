@@ -15,7 +15,7 @@ class Application extends SymfonyApplication
    * @param  boolean $require
    * @return void
    */
-  public function load(string $path, $require = false): void
+  public function load(string $path, $require = false) : Application
   {
     foreach(glob($this->cleanPath($path) . "*.php") as $command) {
       if ($require) {
@@ -32,6 +32,8 @@ class Application extends SymfonyApplication
         }
       }
     }
+
+    return $this;
   }
 
   /**
